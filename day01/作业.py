@@ -76,7 +76,7 @@ for i in ret:
 str0 = "  张三 李四 王五 赵六 "
 print(str0.find("王五"))
 
-#7
+#7..
 num = 1025
 print(bin(num))
 print(oct(num))
