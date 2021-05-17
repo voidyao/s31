@@ -66,7 +66,7 @@ name = input("name: ")
 address = input("address: ")
 hobby = input("hobby: ")
 print("敬爱可亲的%s，最喜欢在%s地方法%s"%(name,address,hobby))
-
+print("敬爱可亲的{}，最喜欢在{}地方做{}".format(name, address, hobby))   # 推荐使用format
 #5
 names = "  张三 李四 王五 赵六 "
 ret = names.strip().split()
