@@ -1,0 +1,149 @@
+day6: 上节回顾
+
+
+time:
+     time.time()
+     time.sleep()	 
+datetime
+
+random
+    >>> import random
+	>>> random.random()      # 大于0且小于1之间的小数
+	0.7664338663654585
+	>>> random.randint(1,5)  # 大于等于1且小于等于5之间的整数
+	2
+	>>> random.randrange(1,3) # 大于等于1且小于3之间的整数
+	1
+	>>> random.choice([1,'23',[4,5]])  # #1或者23或者[4,5]
+	1
+	>>> random.sample([1,'23',[4,5]],2) # #列表元素任意2个组合
+	[[4, 5], '23']
+	>>> random.uniform(1,3) #大于1小于3的小数
+	1.6270147180533838
+	>>> item=[1,3,5,7,9]
+	>>> random.shuffle(item) # 打乱次序
+	>>> item
+	[5, 1, 3, 7, 9]
+	>>> random.shuffle(item)
+	>>> item
+	[5, 9, 7, 1, 3]
+
+hash模块
+    import hash
+	md5 = hash.md5()
+    md5.update("a")
+    md5.update("b")
+    md5.update("c")
+	md5.hexdigest() # abc的摘要结果
+	
+logging模块
+    
+	1 日志器
+	2 处理器
+	3 过滤器
+	4 格式器
+	
+import logging
+def log():
+    #创建logger，如果参数为空则返回root logger
+    logger = logging.getLogger()
+    logger.setLevel(logging.DEBUG)  #设置logger日志等级
+
+    #这里进行判断，如果logger.handlers列表为空，则添加，否则，多次调用函数会重复添加
+    if not logger.handlers:
+        #创建handler
+        fh = logging.FileHandler("test.log",encoding="utf-8")
+        ch = logging.StreamHandler()
+
+        #设置输出日志格式
+        formatter = logging.Formatter(
+            fmt="%(asctime)s %(name)s %(filename)s %(message)s",
+            datefmt="%Y/%m/%d %X"
+            )
+
+        #为handler指定输出格式
+        fh.setFormatter(formatter)
+        ch.setFormatter(formatter)
+
+        #为logger添加的日志处理器
+        logger.addHandler(fh)
+        logger.addHandler(ch)
+
+    return logger #直接返回logger
+
+logger = log()
+
+
+logger.warning("泰拳警告")
+logger.info("提示")
+logger.error("错误")
+logger.debug("查错")
+	
+      
+sys
+   python name.py yuan 123
+   
+re模块
+  元字符
+  .
+  ^
+  $
+  *:[0,无穷]   默认贪婪匹配
+  +:[1,无穷]   默认贪婪匹配
+  ?
+  
+  "ab*"  "abbb"
+  "ab*?"  "a"
+  
+  []:w[abc,]y   "wy"
+     [^0-9]
+	 [a-z]
+	 
+  (): 
+      "ab+"  "ababab"	 
+      "(ab)+"  "ababab"	 
+   转义符\:
+    \d  匹配任何十进制数；      它相当于类 [0-9]。
+    \D  匹配任何非数字字符；    它相当于类 [^0-9]。
+    \s  匹配任何空白字符；      它相当于类 [ \t\n\r\f\v]。
+    \S  匹配任何非空白字符；    它相当于类 [^ \t\n\r\f\v]。
+    \w  匹配任何字母数字字符；   它相当于类 [a-zA-Z0-9_]。
+    \W  匹配任何非字母数字字符； 它相当于类 [^a-zA-Z0-9_]
+    \b  匹配一个特殊字符边界，比如空格 ，&，＃等
+  
+  方法:
+     re.findall()
+	 re.search()
+	 re.match()
+	 re.split()
+	 re.sub()
+	 
+
+今日课程: 面向对象
+
+将具有同一属性和行为的对象归为一类
+
+所谓对象,即一块内存空间
+
+
+类  类属性
+实例对象  实例属性
+
+面向对象三大特性
+
+继承
+封装
+多态
+
+前端(html+css+js+jq) 4天
+mysql(1天)
+框架(Django,3天)
+DRF+VUE(两天)
+
+项目(5天)
+    
+	
+	
+	
+	
+    
