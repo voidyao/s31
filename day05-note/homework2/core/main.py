@@ -124,24 +124,25 @@ def run():
 	"""
 
 	while True:
-		tmp_dict = {
-			1: ['添加学生信息', add_info],
-			2: ['根据学号查看学生信息', show_info],
-			3: ['根据学号更新学生信息', update_info],
-			4: ['根据学号删除学生信息', drop_info],
-			5: ['统计信息', count_info],
-			6: ['保存学生信息', save_data],
-			7: ['退出系统', q],
-		}
-		for k, v in tmp_dict.items():
-			print(k, v[0])
-		cmd = input('\n根据序号选择操作: ').strip()
-		if cmd.isdigit():
-			cmd = int(cmd)
-			res = tmp_dict.get(cmd, None)
-			if res:
-				res[-1]()
-			else:
-				print('输入的数字超过范围!!!')
-		else:
-			print('请输入一个数字')
+		print(111)
+		# tmp_dict = {
+		# 	1: ['添加学生信息', add_info],
+		# 	2: ['根据学号查看学生信息', show_info],
+		# 	3: ['根据学号更新学生信息', update_info],
+		# 	4: ['根据学号删除学生信息', drop_info],
+		# 	5: ['统计信息', count_info],
+		# 	6: ['保存学生信息', save_data],
+		# 	7: ['退出系统', q],
+		# }
+		# for k, v in tmp_dict.items():
+		# 	print(k, v[0])
+		# cmd = input('\n根据序号选择操作: ').strip()
+		# if cmd.isdigit():
+		# 	cmd = int(cmd)
+		# 	res = tmp_dict.get(cmd, None)
+		# 	if res:
+		# 		res[-1]()
+		# 	else:
+		# 		print('输入的数字超过范围!!!')
+		# else:
+		# 	print('请输入一个数字')

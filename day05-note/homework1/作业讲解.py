@@ -22,7 +22,7 @@
 import json
 import prettytable  # https://www.cnblogs.com/Neeo/articles/14144637.html
 dic = {}
-PATH = 'D:\Codes\s31\day05\作业讲解\info.json'
+PATH = 'E:\code\s31\day05-note\homework1\info.json'
 
 def read_file():
     """
